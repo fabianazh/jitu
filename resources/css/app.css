@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply box-border p-0 m-0;
+    }
+    html {
+        @apply scroll-smooth overflow-x-hidden;
+    }
+    body {
+        @apply overflow-x-hidden bg-[#fcfcfc] selection:bg-blue-600 selection:text-white font-poppins;
+    }
+    main {
+        @apply overflow-x-hidden;
+    }
+    th {
+        @apply text-[11px] lg:text-base font-poppins font-medium text-left;
+    }
+    td {
+        @apply text-[11px] lg:text-base text-black;
+    }
+    select {
+        font-size: 6px;
+    }
+    option {
+        @apply text-[0.55rem] lg:text-sm;
+    }
+    ::-webkit-outer-spin-button {
+        appearance: none;
+    }
+    ::-webkit-inner-spin-button {
+        appearance: none;
+    }
+    input[type='password']::-ms-reveal,
+    input[type='password']::-ms-clear {
+        display: none;
+    }
+}
+
+@layer components {
+    .footer__heading {
+        @apply font-semibold text-black text-sm lg:text-base;
+    }
+    .footer__link {
+        @apply text-zinc-600 font-medium hover:text-black transition-all duration-200 text-sm lg:text-base;
+    }
+    .icon__sm {
+        @apply aspect-square cursor-pointer shadow-md hover:translate-y-0.5 grid place-items-center w-7 lg:w-8 rounded-full bg-stone-200 transition-all hover:bg-stone-300 duration-300 text-sm lg:text-sm;
+    }
+}
+
+@layer utilities {
+    .inactive {
+        @apply text-black/70 font-semibold after:transition-all after:scale-x-0 hover:after:scale-x-100 after:block after:pb-0.5 after:border-b-2 after:border-black w-fit inline-block;
+    }
+    .active {
+        @apply text-black w-fit inline-block font-semibold after:transition-all after:scale-x-100 after:block after:pb-0.5 after:border-b-2 after:border-black;
+    }
+}
